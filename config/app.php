@@ -2,7 +2,7 @@
 
 use Cake\Cache\Engine\FileEngine;
 use Cake\Database\Connection;
-use Cake\Database\Driver\Mysql;
+use Cake\Database\Driver\Postgres;
 use Cake\Error\ExceptionRenderer;
 use Cake\Log\Engine\FileLog;
 use Cake\Mailer\Transport\MailTransport;
@@ -17,7 +17,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Configure basic information about the application.
@@ -76,7 +76,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT'),
+        'salt' => env('SECURITY_SALT', 'd2ba99d8573e6c7325b3789432f3fc8df6c5e00292fd2f0a23c1e76dc51ae629'),
     ],
 
     /*
@@ -270,10 +270,14 @@ return [
          * in app_local.php depending on the applications needs.
          */
         'default' => [
-            'className' => Connection::class,
-            'driver' => Mysql::class,
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Dummy',
             'persistent' => false,
             'timezone' => 'UTC',
+            'host'=>'localhost',
+            'username' => 'dummy',
+            'password' => 'dummy',
+            'database' => 'dummydb',            
 
             /**
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
@@ -313,10 +317,14 @@ return [
          * The test connection is used during the test suite.
          */
         'test' => [
-            'className' => Connection::class,
-            'driver' => Mysql::class,
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Dummy',
             'persistent' => false,
             'timezone' => 'UTC',
+            'host'=>'localhost',
+            'username' => 'dummy',
+            'password' => 'dummy',
+            'database' => 'dummydb',               
             //'encoding' => 'utf8mb4',
             'flags' => [],
             'cacheMetadata' => true,

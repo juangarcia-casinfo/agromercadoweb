@@ -13,8 +13,10 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  * @var \App\View\AppView $this
  */
+ 
+ use Cake\Core\Configure;
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = Configure::read('appcfg.title');
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +38,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    
+    
+    <?= $this->Html->css('../js/jquery-ui-1.11.4/jquery-ui.min.css') ?>    
+    <?= $this->Html->script('jquery/jquery-1.11.3.min.js') ?>    
+    <?= $this->Html->script('jquery-ui-1.11.4/jquery-ui.min.js') ?>    
+    <?= $this->Html->script('autobahn/autobahn.min.js') ?>    
+    <?= $this->Html->script('pubsub_lib.js') ?>    
 </head>
 <body>
     <nav class="top-nav">
@@ -43,8 +52,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="/"><span>Cake</span>PHP</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" href="https://api.cakephp.org/4/">API</a>
+            <a target="_blank" href="#">Home</a>
+            <a target="_blank" href="#">Logout</a>
         </div>
     </nav>
     <main class="main">

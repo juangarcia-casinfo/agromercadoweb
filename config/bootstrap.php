@@ -213,3 +213,10 @@ ServerRequest::addDetector('tablet', function ($request) {
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
+
+
+//Application and Session configuration variables
+Configure::write('appcfg', [
+			  			'title'	=>'Agromercado',
+			  			'version'=>'1.0'
+			   ]);
