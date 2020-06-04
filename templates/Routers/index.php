@@ -7,7 +7,7 @@
 <div class="reports index content">
     <h3><?= __('Home') ?></h3>
     <div class="table-responsive">
-       <?= $routers->cfg_data ?>
+       <? //debug($routers->router_data->sub_topic) ?>
     </div>
     <br />
     <div class="column-responsive column-80">
@@ -33,7 +33,7 @@ wsp.open();
 if($routers->request_type=="post")
 {
 	?>
-	setTimeout('startPublishMsgAction(\'<?= json_encode($routers->router_data); ?>\');', 2000);
+	setTimeout('startPublishMsgAction(\'<?= json_encode($routers->router_data); ?>\', \'<?=$routers->router_data->sub_topic; ?>\');', 2000);
 	<?php
 }
 ?>

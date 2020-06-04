@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace App\Controller;
 
 /**
- * Routers Controller
+ * Reports Controller
  *
  * @property \App\Model\Table\ReportsTable $Reports
  * @method \App\Model\Entity\Report[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class RoutersController extends AppController
+class MainsController extends AppController
 {
     var $uses = array();
     /**
@@ -19,19 +19,20 @@ class RoutersController extends AppController
      */
     public function index()
     {
-        $routers = (object)array("cfg_data"=>'Welcome to main selection');
+        $mains = (object)array("mydata"=>'Welcome to mains');
 
 	if ($this->request->is('post')) 
 	{
-		$routers->request_type = "post";
-		$routers->router_data = (object)$this->request->getData();
+		//debug($this);
+		$mains->request_type = "post";
+		$mains->router_data = json_decode($this->request->getData('router_data'));
 	}
 	else
 	{
-		$routers->request_type = "normal";
-		$routers->router_data = '';
+		$mains->request_type = "normal";
+		$mains->router_data = '';
 	}
 
-        $this->set(compact('routers'));
+        $this->set(compact('mains'));
     }
 }

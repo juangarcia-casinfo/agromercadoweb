@@ -140,7 +140,7 @@ function clearReadQ()
 
 
 //Publishing functions
-function startPublishMsg()
+function startPublishMsg(rcvSubTopic)
 {
 	var pubChannel = $('#qqchannel').val();
 	var pubMsg = new Array();
@@ -157,6 +157,7 @@ function startPublishMsg()
 	
 	//Cleaning previous execs
 	$('#wamppublishdata').html('');
+	
 	
 	if(pubChannel=="")
 	{
@@ -181,7 +182,7 @@ function startPublishMsg()
 
 
 //Publishing functions
-function startPublishMsgAction(rvMsg)
+function startPublishMsgAction(rvMsg, rcvSubTopic)
 {
 	var pubChannel = "";
 	var pubMsg = rvMsg;
@@ -189,7 +190,7 @@ function startPublishMsgAction(rvMsg)
 	
 	if(pubChannel=="")
 	{
-		pubChannel = mainTopic;
+		pubChannel = mainTopic + rcvSubTopic;
 	}
 
 	if(pubMsg!="")
