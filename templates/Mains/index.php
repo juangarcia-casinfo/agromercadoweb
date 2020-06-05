@@ -12,7 +12,11 @@
     </div>
     <div class="column-responsive column-80">
         <div class="reports form content">
-		<?= $this->Form->postButton('Sus Contratos', ['controller' => 'Routers', 'action' => 'index'], ['data'=>['sub_topic'=>'.00000.my_contracts', 'other_data'=>'test']]) ?>
+		<?= $this->Form->button('Click me', ['Label'=>'Sus Contratos', 'id'=>'btnContratos', 'type'=>'button', 'onClick'=>'startPublishMsgAction(\'{"test": "data"}\', \'.00000.my_contracts\')']); ?>
         </div>
     </div>
 </div>
+<script language="javascript" type="text/javascript">
+ws.open();
+wsp.open();
+</script>
