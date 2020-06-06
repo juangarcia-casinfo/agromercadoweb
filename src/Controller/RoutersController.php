@@ -42,7 +42,20 @@ class RoutersController extends AppController
 	if ($this->request->is('post')) 
 	{
 		$routers->request_type = "post";
-		$routers->router_data = (object)$this->request->getData();
+		$routers->request_data = (object)$this->request->getData();
+		
+		//Subscribe to main channel to get the answer
+		
+		//Connect to XBAR and publish
+		
+		
+		//Process the response
+		
+	}
+	elseif ($this->request->is('get')) 
+	{
+		$routers->request_type = "get";
+		$routers->request_data = (object)$this->request->getQuery();
 		
 		//Subscribe to main channel to get the answer
 		
@@ -55,10 +68,10 @@ class RoutersController extends AppController
 	else
 	{
 		$routers->request_type = "normal";
-		$routers->router_data = '';
+		$routers->request_data = '';
 	}
 	
-	$routers = json_decode('{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "2DFWE4", "pov": "seller"  }');
+	$routers->response_data = json_decode('{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "2DFWE4", "pov": "seller"  }');
 
         $this->set(compact('routers'));
         $this->viewBuilder()->setOption('serialize', ['routers']);  
