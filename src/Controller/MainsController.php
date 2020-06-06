@@ -13,6 +13,18 @@ class MainsController extends AppController
 {
     var $uses = array();
     /**
+    * Initializing method
+    *
+    * @return \Cake\Http\Response|void
+    */
+    public function initialize(): void
+    {
+    	parent::initialize();
+    	$this->loadComponent('RequestHandler');
+    }     
+    
+    
+    /**
      * Index method
      *
      * @return \Cake\Http\Response|null|void Renders view
@@ -33,6 +45,10 @@ class MainsController extends AppController
 		$mains->router_data = '';
 	}
 
-        $this->set(compact('mains'));
+        //$this->set(compact('mains'));
+        //$this->set('_serialize', ['mains']);
+	$this->set('mains', $mains);
+        // Specify which view vars JsonView should serialize.
+        $this->viewBuilder()->setOption('serialize', ['mains']);        
     }
 }

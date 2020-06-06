@@ -24,6 +24,8 @@
 use Cake\Http\Middleware\CsrfProtectionMiddleware;
 use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
+use Cake\Routing\Router;
+use Cake\Core\Plugin;
 
 /*
  * The default class to use for all routes
@@ -96,3 +98,17 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * });
  * ```
  */
+
+ //Routing for REST
+ Router::scope('/api', function (RouteBuilder $routes)
+ {
+ 	$routes->setExtensions(['json']);
+ 	//$routes->resources('secusers', ['only'=>['index', 'view']]);
+ 	//$routes->resources('secusers', ['path'=>'usr', 'only'=>['index', 'view']]);
+ 	//$routes->resources('mains', ['map'=>['index'=>['action'=>'index', 'method'=>'GET']], 'only'=>['index']]);
+ 	$routes->resources('Routers', ['path'=>'/routeme', 'only'=>['index']]);
+ });
+
+ 
+ 
+//Plugin::routes();

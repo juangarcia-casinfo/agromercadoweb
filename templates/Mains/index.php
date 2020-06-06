@@ -8,7 +8,7 @@
     <h3><?= __('Reports') ?></h3>
     <div class="table-responsive">
        <? //debug($pins); ?>
-       <?=$mains->router_data; ?>
+       <?=$mains->request_type; ?>
     </div>
     <div class="column-responsive column-80">
         <div class="reports form content">
