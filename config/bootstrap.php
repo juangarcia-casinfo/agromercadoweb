@@ -218,5 +218,9 @@ ServerRequest::addDetector('tablet', function ($request) {
 //Application and Session configuration variables
 Configure::write('appcfg', [
 			  			'title'	=>'Agromercado',
-			  			'version'=>'1.0'
+			  			'version'=>'1.0',
+			  			'xbaraddress'=>'ws://127.0.0.1:9090',
+			  			'xbarrealm'=>'realm-001',
+			  			'xbarmaintopic'=>'ec.agromercado',
+			  			'customerlocation'=>'10001'
 			   ]);
