@@ -68,7 +68,7 @@ class CrossbarComponent extends Component
 	*/
 	public function subscribe($rcvTopic = null)
 	{
-		if($rcvTopic!=="" || $rcvTopic==null)
+		if($rcvTopic=="" || $rcvTopic==null)
 		{
 			$rcvTopic = $this->wsUniqueTopic;
 		}
@@ -112,7 +112,7 @@ class CrossbarComponent extends Component
 	*/
 	public function publish($rcvTopic = null, $rcvMessage = "")
 	{
-		if($rcvTopic!=="" || $rcvTopic==null)
+		if($rcvTopic=="" || $rcvTopic==null)
 		{
 			$rcvTopic = $this->wsUniqueTopic;
 		}
@@ -168,18 +168,29 @@ class CrossbarComponent extends Component
 	/*
 	This methods publish and a message to the specified topic to WAMP Server
 	*/
-	public function publishSubscribe($rcvTopic = null, $rcvMessage = "")
+	public function publishSubscribe($rcvPubTopic = null, $rcvSubTopic = null, $rcvMessage = "")
 	{
 		$selfThis =& $this;
 
-	
-		if($rcvTopic!=="" || $rcvTopic==null)
+		
+		//Validating the topics received
+		if($rcvPubTopic=="" || $rcvPubTopic==null)
 		{
-			$rcvTopic = $this->wsUniqueTopic;
+			$rcvPubTopic = $this->wsUniqueTopic;
 		}
 		else
 		{
-			$rcvTopic = $this->wsUniqueTopic.".".$rcvTopic;	
+			$rcvPubTopic = $this->wsUniqueTopic.".".$rcvPubTopic;	
+		}
+		
+		
+		if($rcvSubTopic=="" || $rcvSubTopic==null)
+		{
+			$rcvSubTopic = $this->wsUniqueTopic;
+		}
+		else
+		{
+			$rcvSubTopic = $this->wsUniqueTopic.".".$rcvSubTopic;	
 		}
 		
 		$onClose = function ($msg)  use($selfThis)
@@ -199,7 +210,7 @@ class CrossbarComponent extends Component
 
 		$pubConn->on(
 		    'open',
-		    function (ClientSession $session) use ($pubConn, $rcvTopic, $rcvMessage, $selfThis)
+		    function (ClientSession $session) use ($pubConn, $rcvPubTopic, $rcvSubTopic, $rcvMessage, $selfThis)
 		    {
 		    	//Subscription events
 		        $onEvent = function ($args) use ($pubConn, $selfThis)
@@ -210,13 +221,13 @@ class CrossbarComponent extends Component
 		            $pubConn->close();
 		        };
 
-		        $session->subscribe($rcvTopic, $onEvent);			    	
+		        $session->subscribe($rcvSubTopic, $onEvent, ['match'=>'prefix']);			    	
 		    
 		    
 		    	 //Publishing event
 		    	 if($rcvMessage!="" && $rcvMessage!=null)
 		    	 {
-			    	 $session->publish($rcvTopic, [$rcvMessage], [], ["acknowledge" => true])->then(
+			    	 $session->publish($rcvPubTopic, [$rcvMessage], [], ["acknowledge" => true])->then(
 			            function ()  use ($pubConn)
 			            {
 			            	  //$pubConn->close();

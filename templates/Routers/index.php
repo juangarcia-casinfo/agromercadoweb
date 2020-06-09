@@ -25,16 +25,3 @@
         </div>
     </div>
 </div>
-<script language="javascript" type="text/javascript">
-ws.open();
-wsp.open();
-
-<?php 
-if($routers->request_type=="post")
-{
-	?>
-	setTimeout('startPublishMsgAction(\'<?= json_encode($routers->router_data); ?>\', \'<?=$routers->router_data->sub_topic; ?>\');', 2000);
-	<?php
-}
-?>
-</script>

@@ -57,7 +57,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * Apply a middleware to the current route scope.
      * Requires middleware to be registered through `Application::routes()` with `registerMiddleware()`
      */
-    $builder->applyMiddleware('csrf');
+    //$builder->applyMiddleware('csrf');
 
     /*
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -107,6 +107,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
  	//$routes->resources('secusers', ['path'=>'usr', 'only'=>['index', 'view']]);
  	//$routes->resources('mains', ['map'=>['index'=>['action'=>'index', 'method'=>'GET']], 'only'=>['index']]);
  	$routes->resources('Routers', ['path'=>'/routeme', 'only'=>['index']]);
+ 	$routes->resources('Routers', ['path'=>'/routemepost', 'only'=>['index'], 'map'=>['index'=>['action'=>'index', 'method'=>'POST']]]);
+ 	
  });
 
  

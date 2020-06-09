@@ -5,18 +5,14 @@
  */
 ?>
 <div class="reports index content">
-    <h3><?= __('Reports') ?></h3>
+    <h3><?= __('Main Menu') ?></h3>
     <div class="table-responsive">
-       <? //debug($pins); ?>
-       <?=$mains->request_type; ?>
+       <?debug($mains); ?>
     </div>
     <div class="column-responsive column-80">
-        <div class="reports form content">
-		<?= $this->Form->button('Click me', ['Label'=>'Sus Contratos', 'id'=>'btnContratos', 'type'=>'button', 'onClick'=>'startPublishMsgAction(\'{"test": "data"}\', \'.00000.my_contracts\')']); ?>
+        <div class="mains form content">
+		<?= $this->Form->postButton('Sus contratos', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "2DFWE4", "pov": "seller"  }', true)]) ?>
+		<?= $this->Form->postButton('Informacion Contable', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "2DFWE4", "pov": "seller" }', true)]) ?>
         </div>
     </div>
 </div>
-<script language="javascript" type="text/javascript">
-ws.open();
-wsp.open();
-</script>

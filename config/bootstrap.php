@@ -224,3 +224,7 @@ Configure::write('appcfg', [
 			  			'xbarmaintopic'=>'ec.agromercado',
 			  			'customerlocation'=>'10001'
 			   ]);
+			   
+Configure::write('arbecfg', [
+						'xbar_endpoint'=>'http://localhost/agromercado/api/routemepost/index.json'
+			  ]);
