@@ -7,7 +7,7 @@ File:			src/View/Helper/ValidationHelper.php
 */
 namespace App\Controller\Component;
 
-include 'vendor\thruway\autoload.php';
+include './vendor/thruway/autoload.php';
 
 
 use Cake\Controller\Component;
@@ -20,14 +20,14 @@ Logger::set(new NullLogger());
 
 class CrossbarComponent extends Component
 {
-	public string $wsAddress;
-	public string $wsRealm;
-	public string $wsMainTopic;
-	public string $wsSessionId;
-	public string $wsUniqueTopic;
-	public string $status;
-	public string $request_data;
-	public string $response_data;
+	public $wsAddress;
+	public $wsRealm;
+	public $wsMainTopic;
+	public $wsSessionId;
+	public $wsUniqueTopic;
+	public $status;
+	public $request_data;
+	public $response_data;
 
 
 	/*

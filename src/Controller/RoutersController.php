@@ -60,15 +60,20 @@ class RoutersController extends AppController
 		}
 		else
 		{
-			$routers->request_data = (object) $this->request->getData();
+			$routers->request_data = (Object) $this->request->getData();
 			$postProcessData		= $routers->request_data;
-			$routers->request_data = json_encode($routers->request_data);
+			$routers->request_data = json_decode(json_encode($routers->request_data));
 		}
 
 
 		//Sending to xbar request		
 		if($routers->request_data!="")
 		{
+			if(!isset($routers->request_data->sub_topic))
+			{
+				$routers->request_data->sub_topic = '';
+			}
+		
 			$this->Crossbar->publishSubscribe($routers->request_data->sub_topic, '', $routers->request_data);
 			$routers->response_data = 	$this->Crossbar->response_data;
 		}
@@ -79,23 +84,26 @@ class RoutersController extends AppController
 	elseif ($this->request->is('get')) 
 	{
 		$routers->request_type = "get";
-		$routers->request_data = $this->request->getQuery();
+		$routers->request_data = json_decode($this->request->getQuery('json_data'));
 
 
 		//Sending xbar request		
-		if(json_encode($routers->request_data)!="")
+		if($routers->request_data!="")
 		{
+			if(!isset($routers->request_data->sub_topic))
+			{
+				$routers->request_data->sub_topic = '';
+			}
+			
+		
 			$this->Crossbar->publishSubscribe($routers->request_data->sub_topic, '', $routers->request_data);
 			$routers->response_data = $this->Crossbar->response_data;
 		}
-
-
-		$routers->request_data = json_decode($routers->request_data);
 	}
 	else
 	{
-	$routers->request_type = "normal";
-	$routers->request_data = '';
+		$routers->request_type = "normal";
+		$routers->request_data = '';
 	}
 
 	//Formatting the response to the output
