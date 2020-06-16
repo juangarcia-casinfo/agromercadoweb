@@ -46,27 +46,38 @@ class MainsController extends AppController
         {
         	case "get":
 			$mains->request_type = "get";
-			$mains->request_data = (Object) $this->request->getQuery();
+			$mains->request_data = $this->request->getQuery('request_data');
+			$mains->response_data = "";
 			
 			if($mains->request_data=="" || count((array)$mains->request_data)==0)
 			{
 				$mains->request_data = "";
 			}
+			else
+			{
+				$mains->request_data = json_decode($mains->request_data);
+			}			
         	break;
         	
         	case "post":
 			$mains->request_type = "post";
-			$mains->request_data = (Object)$this->request->getData();
+			$mains->request_data = $this->request->getData('request_data');
+			$mains->response_data = "";
 			
 			if($mains->request_data=="" || count((array)$mains->request_data)==0)
 			{
 				$mains->request_data = "";
-			}			
+			}
+			else
+			{
+				$mains->request_data = json_decode($mains->request_data);
+			}
         	break;
         	
         	default:
 			$mains->request_type = "normal";
-			$mains->request_data = '';        	
+			$mains->request_data = '';
+			$mains->response_data = "";
         }
         
 
@@ -89,54 +100,11 @@ class MainsController extends AppController
 	        
 	        //Processing the received data
 	        //debug($response->getStringBody()); 
+	        $rcvData = $response->getStringBody();
+	        $rcvData = substr($rcvData, strpos($rcvData, '{'), strlen($rcvData));
 	        $rcvData = json_decode($response->getStringBody());
 	        $rcvData = $rcvData->routers->response_data;
-	        
-	        //debug($rcvData->sub_topic);
-	        
-	        
-	        //Check the mandatory values
-	        $mandatory 		= ["location", "sub_topic"];
-	        $mandatoryError 	= "";
-	        
-	        foreach($mandatory as $evalMandatory)
-	        {
-	        	if(!property_exists($rcvData, $evalMandatory))
-	        	{
-	        		if($rcvData[$evalMandatory]=="")
-	        		{
-		        		$mandatoryError = "The parameter ".$evalMandatory." is empty.";
-	        		}
-	        	}
-	        	else
-	        	{
-	        		$mandatoryError = "The parameter ".$evalMandatory." does not exists.";
-	        		break;
-	        	}
-	        }
-	        
-	        
-	        if($mandatoryError!="")
-	        {
-		        //Checking the received data to redirect to the appropriate controller
-		        $moduleTopicMatches = ["my_contracts"=>"Contratos", "my_accounting"=>"Contabilidads"];
-		        
-		        if(array_key_exists($rcvData->sub_topic, $moduleTopicMatches))
-		        {
-		        	//Redirect
-		        	echo "Redirecting";	
-		        	$this->redirect(['controller'=>'Contratos', 'action'=>'index', '?'=>$rcvData]);
-		        }
-		        else
-		        {
-		        	$mains->process_message = "There was no module found for the specified topic: ".$rcvData->sub_topic;
-		        }
-	        }
-	        else
-	        {
-			$mains->process_message = $mandatoryError;     	
-	        }
-	        
+	        $mains->response_data = $rcvData;
         }
         //TODO: END This must be a component to reuse        
 
