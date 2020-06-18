@@ -25,7 +25,7 @@
 		   
 		   <span style="display: none;">
 		   <?=$this->Form->create();?>
-		   <?=$this->Form->control('request_data', ['type'=>'hidden']);?>
+		   <?=$this->Form->control('request_data', ['type'=>'hidden', 'id'=>'request_data']);?>
 		   <?=$this->Form->button('Send Data', ['type'=>'submit', 'id'=>'btn_send_data']); ?>
 		   <?=$this->Form->end();?>
 		   </span>
