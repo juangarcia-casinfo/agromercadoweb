@@ -11,8 +11,10 @@
 	{
 	?>
 		<div class="mains form content">
-		<?= $this->Form->postButton('Sus contratos', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "2DFWE4", "pov": "seller"  }']]) ?>
-		<?= $this->Form->postButton('Informacion Contable', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "2DFWE4", "pov": "seller" }', true)]) ?>
+		<?= $this->Form->postButton('Sus contratos (Seller)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "2DFWE4", "pov": "seller"  }']]) ?>
+		<?= $this->Form->postButton('Informacion Contable (Seller)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "2DFWE4", "pov": "seller" }', true)]) ?>
+		<?= $this->Form->postButton('Sus contratos (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "WEF239", "pov": "buyer"  }']]) ?>
+		<?= $this->Form->postButton('Informacion Contable (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "2DFWE4", "pov": "buyer" }', true)]) ?>
 		</div>
 	<?
 	}
