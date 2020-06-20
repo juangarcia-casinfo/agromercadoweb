@@ -1,0 +1,275 @@
+2020-06-11 15:54:03 Error: [Cake\Http\Client\Exception\NetworkException] cURL Error (28) Operation timed out after 30001 milliseconds with 0 bytes received in /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client/Adapter/Curl.php on line 67
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:466
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:436
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:391
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:274
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:86
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-11 16:15:23 Error: [TypeError] json_decode() expects parameter 1 to be string, null given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/RoutersController.php on line 110
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/RoutersController.php:110
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:174
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /api/routemepost/index.json
+Client IP: 127.0.0.1
+
+
+2020-06-13 14:17:26 Error: [Cake\Http\Client\Exception\NetworkException] cURL Error (28) Operation timed out after 30001 milliseconds with 0 bytes received in /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client/Adapter/Curl.php on line 67
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:466
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:436
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:391
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:274
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:86
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-13 14:42:51 Error: [Cake\Http\Client\Exception\NetworkException] cURL Error (28) Operation timed out after 30000 milliseconds with 0 bytes received in /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client/Adapter/Curl.php on line 67
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:466
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:436
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:391
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Client.php:274
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:86
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:06:39 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:09:44 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:27:19 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:31:30 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:33:39 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:33:53 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+
+2020-06-20 14:34:54 Error: [TypeError] substr() expects parameter 2 to be int, bool given in /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php on line 104
+Stack Trace:
+- /home/gk/cakephpinstall/agromercadoweb/src/Controller/MainsController.php:104
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/Controller.php:521
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/BaseApplication.php:229
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:164
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:160
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:119
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /home/gk/cakephpinstall/agromercadoweb/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /home/gk/cakephpinstall/agromercadoweb/webroot/index.php:40
+
+Request URL: /mains
+Referer URL: http://agromercado.local/mains
+Client IP: 127.0.0.1
+
+

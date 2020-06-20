@@ -7,7 +7,7 @@ File:			src/View/Helper/ValidationHelper.php
 */
 namespace App\Controller\Component;
 
-include './vendor/thruway/autoload.php';
+include $_SERVER['DOCUMENT_ROOT'].'/vendor/thruway/autoload.php';
 
 
 use Cake\Controller\Component;

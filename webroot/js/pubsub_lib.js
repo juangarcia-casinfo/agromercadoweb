@@ -9,28 +9,28 @@ Description:		Publish and Subscribe Methods and formatting
 var qData = "";
 var to = 0;
 var dataArr = [];
-var wsAddress = 'ws://127.0.0.1:9090';										//WAMP Webservice address
-var realmName = 'realm-001';												//WAMP realm
-var mainTopic = 'scrmsg.main';												//Main Topic
+var wsAddress = 'ws://127.0.0.1:8080/ws';										//WAMP Webservice address
+var realmName = 'realm1';				   								//WAMP realm
+var mainTopic = 'ec.agromercado';												//Main Topic
 var isDebug = true;
 
 //Loading WAMP server connection
 //NOTE: Two objects are required as it cannot subscribe and publish at the same time with the same object
 var ws = new autobahn.Connection({	url: wsAddress, realm: realmName });
 var wsp = new autobahn.Connection({ url: wsAddress, realm: realmName });		//Duplicates the object for publishing
-		
-		
-//Loading WAMP reader							
+
+
+//Loading WAMP reader
 ws.onopen = function(session, details)
 {
 	console.log("Connected");
-	
+
 	//Subscribing to a topic and receive events
-	function on_counter(args) 
+	function on_counter(args)
 	{
 	    var msg = args[0];
 	    console.log("Received Message: " + msg);
-	    
+
 	    if(msg!="" || msg==null)
 	    {
 	    	readAction(msg);													//NOTE: This calls the previous created functions
@@ -40,17 +40,17 @@ ws.onopen = function(session, details)
 	    	console.log('No message was received!');
 	    }
 	}
-	
+
 	session.subscribe(mainTopic, on_counter).then(
-	        function (sub) 
+	        function (sub)
 	        {
 	            console.log('subscribed to topic');
 	        },
-	        function (err) 
+	        function (err)
 	        {
 	            console.log('failed to subscribe to topic', err);
 	        }
-	);		
+	);
 }
 
 //Loading WAMP publisher
@@ -61,7 +61,7 @@ wsp.onopen = function(session, details)
 
 
 //Closing WAMP actions
-ws.onclose = function(reason, details) 
+ws.onclose = function(reason, details)
 {
     console.log("Connection lost(Subscribe): " + reason);
 }
@@ -70,7 +70,7 @@ wsp.onclose = function()
 {
 	console.log("Connection lost(Publish):" + reason);
 }
-		
+
 
 //Function that process and creates the table
 function readAction(rcvParams)
@@ -88,12 +88,12 @@ function readAction(rcvParams)
 	var tmpDataArr = [];
 	var tmpLogData = "";
 	var tmpMsg = "";
-	
+
 
 	rcvParams = rcvParams.trim();
 	origMsg = rcvParams;
 	clearReadQ();
-	
+
 
 	if(isDebug)
 	{
@@ -106,8 +106,8 @@ function readAction(rcvParams)
 	{
 		tmpDateTime = new Date();
 		rcvParams = JSON.parse(rcvParams);
-		
-		
+
+
 		if(rcvParams.scene!="" && rcvParams.scene!=undefined)
 		{
 			rcvParams.rcv_date = tmpDateTime;
@@ -120,15 +120,15 @@ function readAction(rcvParams)
 			{
 				console.log('Scene processing...');
 				console.log(rcvParams);
-			}			
-			
+			}
+
 			//Set JSON String into the hidden variable and do the post to the next control
 			$('#router_form').attr('action', ('/agromercado/' + rcvParams.scene));
 			$('#router_data').attr('value', rcvParams.origmsg);
 			//$('#router_send').click();
 			$('#router_form').submit();
 		}
-	}	
+	}
 }
 
 function clearReadQ()
@@ -136,7 +136,7 @@ function clearReadQ()
 	$('#router_form').attr('action', '/agromercado/routers');
 	$('#router_data').value = '';
 	dataArr = [];
-}		
+}
 
 
 //Publishing functions
@@ -144,7 +144,7 @@ function startPublishMsg(rcvSubTopic)
 {
 	var pubChannel = $('#qqchannel').val();
 	var pubMsg = new Array();
-	
+
 	for(ic=1;ic<5;ic++)
 	{
 		if($('#qqmessage' + ic).val()!='')
@@ -152,13 +152,13 @@ function startPublishMsg(rcvSubTopic)
 			pubMsg.push($('#qqmessage' + ic).val());
 		}
 	}
-	
+
 	console.log(pubMsg);
-	
+
 	//Cleaning previous execs
 	$('#wamppublishdata').html('');
-	
-	
+
+
 	if(pubChannel=="")
 	{
 		pubChannel = mainTopic;
@@ -175,7 +175,7 @@ function startPublishMsg(rcvSubTopic)
 		{
 			$('#wamppublishdata').html('No data to be published');
 			$('#wamppublishdata').focus();
-		}				
+		}
 	}
 
 }
@@ -186,8 +186,8 @@ function startPublishMsgAction(rvMsg, rcvSubTopic)
 {
 	var pubChannel = "";
 	var pubMsg = rvMsg;
-	
-	
+
+
 	if(pubChannel=="")
 	{
 		pubChannel = mainTopic + rcvSubTopic;
@@ -204,15 +204,15 @@ function startPublishMsgAction(rvMsg, rcvSubTopic)
 			console.log('<br />Published on channel: ');
 			console.log(pubChannel);
 			console.log('<br />Data sent to queue');
-			console.log(pubMsg);	
+			console.log(pubMsg);
 		}
 	}
 	else
 	{
 		if(isDebug)
 		{
-			console.log('No data to be published');	
+			console.log('No data to be published');
 		}
-		
-	}				
+
+	}
 }
