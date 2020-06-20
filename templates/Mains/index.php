@@ -13,8 +13,11 @@
 		<div class="mains form content">
 		<?= $this->Form->postButton('Sus contratos (Seller)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "2DFWE4", "pov": "seller"  }']]) ?>
 		<?= $this->Form->postButton('Informacion Contable (Seller)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "2DFWE4", "pov": "seller" }', true)]) ?>
+		<?= $this->Form->postButton('Buscar Productos (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "find_product_classes", "participant_access_code": "WEF239", "pov": "browser"  }']]) ?>
 		<?= $this->Form->postButton('Sus contratos (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "my_contracts", "participant_access_code": "WEF239", "pov": "buyer"  }']]) ?>
-		<?= $this->Form->postButton('Informacion Contable (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "2DFWE4", "pov": "buyer" }', true)]) ?>
+		<?= $this->Form->postButton('Recibir (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "receive_shipment", "participant_access_code": "WEF239", "pov": "buyer"  }']]) ?>
+		<?= $this->Form->postButton('Aprobar (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>['request_data'=>'{ "location": "10001", "sub_topic": "approve_receipt", "participant_access_code": "WEF239", "pov": "buyer"  }']]) ?>
+		<?= $this->Form->postButton('Informacion Contable (Buyer)', ['controller' => 'Mains', 'action' => 'index'], ['data'=>json_decode('{ "location": "10001", "sub_topic": "my_accounting", "participant_access_code": "WEF239", "pov": "buyer" }', true)]) ?>
 		</div>
 	<?
 	}
