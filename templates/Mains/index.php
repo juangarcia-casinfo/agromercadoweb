@@ -39,14 +39,4 @@
 	}
 	?>		
     </div>
-    <script language="javascript" type="text/javascript">
-    	function sendData(rcvDataStr)
-    	{
-    		var translateData = rcvDataStr.replace(new RegExp(/\|+\|+DBLQT+\|+\|/, 'g'), '"');
-    		console.log(translateData);
-    		
-    		$('#request_data').val(translateData);
-    		$('#btn_send_data').click();
-    	}
-    </script>
 </div>

@@ -43,8 +43,7 @@ $cakeDescription = Configure::read('appcfg.title');
     <?= $this->Html->css('../js/jquery-ui-1.11.4/jquery-ui.min.css') ?>    
     <?= $this->Html->script('jquery/jquery-1.11.3.min.js') ?>    
     <?= $this->Html->script('jquery-ui-1.11.4/jquery-ui.min.js') ?>    
-    <?= $this->Html->script('autobahn/autobahn.min.js') ?>    
-    <?= $this->Html->script('pubsub_lib.js') ?>    
+    <?= $this->Html->script('formvalidation_lib.js') ?>    
 </head>
 <body>
     <nav class="top-nav">
