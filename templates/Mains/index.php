@@ -40,3 +40,4 @@
 	?>		
     </div>
 </div>
+<div id="modal-container"></div>
