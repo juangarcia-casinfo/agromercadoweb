@@ -165,7 +165,7 @@ function fieldValidator(rcvFldData, rcvType)
 			break;
 
 			case "percent":
-			    // remore pecentage sign if any
+			    // remove pecentage sign if any
                 rcvFldData = rcvFldData.replace("%", "");
 				if(!regexDecimal.test(rcvFldData))
 				{
