@@ -6,5 +6,5 @@ appcfg = {
 		 } 
 			   
 xbarcfg = {
-		    'xbar_endpoint'     : 'http://localhost:5125'
+		    'xbar_endpoint'     : 'http://localhost:8282'
 		  }

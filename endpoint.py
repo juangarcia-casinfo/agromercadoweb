@@ -18,6 +18,7 @@ utl                 = utilityLibrary()
 htmlStr             = ""
 htmlContentTemplate = "main_menu"
 dataToWrap          = ""
+wm.headerInit()
 
 
 def endpointLoader():
@@ -39,7 +40,7 @@ def endpointLoader():
 
 
     #Building the data to wrap
-    wm.headerInit()
+    #wm.headerInit()
     htmlStr += wm.htmlTemplateWrapper(dataToWrap, htmlContentTemplate)    
     print(htmlStr)
     
