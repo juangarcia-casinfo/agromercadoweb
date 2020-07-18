@@ -7,7 +7,8 @@ class wrapperManager():
 
 
     def headerInit(self):
-        print('HTTP/1.0 200 OK \n Content-Type: text/html \n')
+        #print('HTTP/1.0 200 OK \n Content-Type: text/html \n')
+        print('Content-Type: text/html \n')
         print('')
     
 

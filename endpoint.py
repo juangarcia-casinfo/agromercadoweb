@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #Main endpoint caller
 import cfg.maincfgs
 import os
