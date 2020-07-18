@@ -1,0 +1,34 @@
+<h3>Main Menu</h3>
+<div class="column-responsive column-80">
+    <div class="mains form content">
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="request_data"
+                value="{ &quot;location&quot;: &quot;10001&quot;, &quot;sub_topic&quot;: &quot;my_contracts&quot;, &quot;participant_access_code&quot;: &quot;2DFWE4&quot;, &quot;pov&quot;: &quot;seller&quot;  }"><button
+                type="submit">Sus contratos (Seller)</button></form>
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="location" value="10001"><input type="hidden" name="sub_topic" value="my_accounting"><input
+                type="hidden" name="participant_access_code" value="2DFWE4"><input type="hidden" name="pov"
+                value="seller"><button type="submit">Informacion Contable (Seller)</button></form>
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="request_data"
+                value="{ &quot;location&quot;: &quot;10001&quot;, &quot;sub_topic&quot;: &quot;find_product_classes&quot;, &quot;participant_access_code&quot;: &quot;WEF239&quot;, &quot;pov&quot;: &quot;browser&quot;  }"><button
+                type="submit">Buscar Productos (Buyer)</button></form>
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="request_data"
+                value="{ &quot;location&quot;: &quot;10001&quot;, &quot;sub_topic&quot;: &quot;my_contracts&quot;, &quot;participant_access_code&quot;: &quot;WEF239&quot;, &quot;pov&quot;: &quot;buyer&quot;  }"><button
+                type="submit">Sus contratos (Buyer)</button></form>
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="request_data"
+                value="{ &quot;location&quot;: &quot;10001&quot;, &quot;sub_topic&quot;: &quot;receive_shipment&quot;, &quot;participant_access_code&quot;: &quot;WEF239&quot;, &quot;pov&quot;: &quot;buyer&quot;  }"><button
+                type="submit">Recibir (Buyer)</button></form>
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="request_data"
+                value="{ &quot;location&quot;: &quot;10001&quot;, &quot;sub_topic&quot;: &quot;approve_receipt&quot;, &quot;participant_access_code&quot;: &quot;WEF239&quot;, &quot;pov&quot;: &quot;buyer&quot;  }"><button
+                type="submit">Aprobar (Buyer)</button></form>
+        <form method="post" accept-charset="utf-8" action="endpoint.py"><input type="hidden"
+                name="location" value="10001"><input type="hidden" name="sub_topic" value="my_accounting"><input
+                type="hidden" name="participant_access_code" value="WEF239"><input type="hidden" name="pov"
+                value="buyer"><button type="submit">Informacion Contable (Buyer)</button></form>
+    </div>
+</div>
+<div id="modal-container"></div>
